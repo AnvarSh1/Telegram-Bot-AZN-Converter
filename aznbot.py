@@ -10,15 +10,12 @@ import requests
 import telebot
 import os
 
-TOKEN = "477403139:AAG00B8blEjL3F1x6siJrUORoRduiILWeIo"
-PORT = int(os.environ.get('PORT', '5000'))
-updater = Updater(TOKEN)
-# add handlers
-updater.start_webhook(listen="0.0.0.0",
-		port=PORT,
-		url_path=TOKEN)
-updater.bot.set_webhook("https://aznbot.herokuapp.com/" + TOKEN)
-updater.idle()
+updater.start_webhook(listen='0.0.0.0',
+		port=80,
+		url_path='477403139:AAG00B8blEjL3F1x6siJrUORoRduiILWeIo',
+		key='private.key',
+		cert='cert.pem',
+		webhook_url='https://aznbot.herokuapp.com:8443/477403139:AAG00B8blEjL3F1x6siJrUORoRduiILWeIo')
 
 
 
