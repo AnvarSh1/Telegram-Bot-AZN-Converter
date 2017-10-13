@@ -23,7 +23,7 @@ xmlstr = urr.urlopen(strn)
 all_of_them = xtd.parse(xmlstr.read())
 
 
-bot = telebot.TeleBot("477403139:AAG00B8blEjL3F1x6siJrUORoRduiILWeIo")
+bot = telebot.TeleBot("TOKEN")
 
 @bot.message_handler(commands=['start', 'help'])
 def send_welcome(message):
@@ -69,6 +69,5 @@ def echo_all(message):
 bot.polling()
 
 
-####_______________________________________________________________________________
-###url = "https://api.telegram.org/bot477403139:AAG00B8blEjL3F1x6siJrUORoRduiILWeIo/"
+
 
