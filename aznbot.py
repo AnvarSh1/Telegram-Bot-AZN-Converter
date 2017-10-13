@@ -27,7 +27,7 @@ bot = telebot.TeleBot("477403139:AAG00B8blEjL3F1x6siJrUORoRduiILWeIo")
 
 @bot.message_handler(commands=['start', 'help'])
 def send_welcome(message):
-	bot.reply_to(message, "WAZZZAAAAAAP")
+	bot.reply_to(message, "Available commands: /USD (or /dollar), /EUR (or /euro), /RUB (or /ruble), /GBP (or /pound) ")
 
 # Get Ruble
 RUB = all_of_them['ValCurs']['ValType'][1]['Valute'][4]['Value']
@@ -40,7 +40,7 @@ def send_welcome(message):
 # Get US Dollar
 USD = all_of_them['ValCurs']['ValType'][1]['Valute'][44]['Value']
 USD = float(USD)
-@bot.message_handler(commands=['USD', 'Dollar'])
+@bot.message_handler(commands=['USD', 'dollar'])
 def send_welcome(message):
 	bot.reply_to(message, '1 AZN = '+str(USD)+' USD')
 
