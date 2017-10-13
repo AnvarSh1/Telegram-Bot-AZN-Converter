@@ -1,7 +1,8 @@
 certifi==2017.7.27.1
 chardet==3.0.4
 idna==2.6
+pyTelegramBotAPI==3.2.1
 requests==2.7.0
-telebot==0.0.3
+six==1.11.0
 urllib3==1.22
 xmltodict==0.11.0
