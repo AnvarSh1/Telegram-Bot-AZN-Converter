@@ -50,7 +50,7 @@ EUR = all_of_them['ValCurs']['ValType'][1]['Valute'][38]['Value']
 EUR = float(EUR)
 @bot.message_handler(commands=['EUR', 'euro'])
 def send_welcome(message):
-	bot.reply_to(message, ''1 AZN = '+str(EUR)+' EUR'')
+	bot.reply_to(message, '1 AZN = '+str(EUR)+' EUR')
 
 
 # Get UK Pound
