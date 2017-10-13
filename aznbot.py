@@ -17,7 +17,7 @@ updater = Updater(TOKEN)
 updater.start_webhook(listen="0.0.0.0",
                       port=PORT,
                       url_path=TOKEN)
-updater.bot.set_webhook("https://<appname>.herokuapp.com/" + TOKEN)
+updater.bot.set_webhook("https://aznbot.herokuapp.com/" + TOKEN)
 updater.idle()
 
 
@@ -77,7 +77,7 @@ def echo_all(message):
 	bot.reply_to(message, "I don't get it.")
 
 
-bot.polling()
+#bot.polling()
 
 
 
