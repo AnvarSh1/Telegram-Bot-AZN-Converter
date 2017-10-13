@@ -1,1 +1,1 @@
-web: python aznbot.py
+web: python3 aznbot.py
