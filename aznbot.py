@@ -11,17 +11,6 @@ import telebot
 import os
 
 
-TOKEN = "477403139:AAG00B8blEjL3F1x6siJrUORoRduiILWeIo"
-PORT = int(os.environ.get('PORT', '5000'))
-updater = Updater(TOKEN)
-# add handlers
-updater.start_webhook(listen="0.0.0.0",
-                      port=PORT,
-                      url_path=TOKEN)
-updater.bot.set_webhook("https://aznbot.herokuapp.com/" + TOKEN)
-updater.idle()
-
-
 ### concat URL for today's XML
 str1='https://www.cbar.az/currencies/'
 str2=datetime.datetime.today().strftime('%d.%m.%Y')
@@ -81,4 +70,12 @@ def echo_all(message):
 
 
 
-
+TOKEN = "477403139:AAG00B8blEjL3F1x6siJrUORoRduiILWeIo"
+PORT = int(os.environ.get('PORT', '5000'))
+updater = Updater(TOKEN)
+# add handlers
+updater.start_webhook(listen="0.0.0.0",
+                      port=PORT,
+                      url_path=TOKEN)
+updater.bot.set_webhook("https://aznbot.herokuapp.com/" + TOKEN)
+updater.idle()
