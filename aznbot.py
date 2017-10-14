@@ -9,7 +9,7 @@ import datetime
 import requests
 import telebot
 import os
-
+from telegram.ext import Updater
 
 ### concat URL for today's XML
 str1='https://www.cbar.az/currencies/'
