@@ -2,14 +2,59 @@
 ### xmltodict to parse given xml
 ### datetime for URL handling
 ### requests for requests, duh
-### telebot for Telegram API
+### telebot for additional Telegram API
+### telegram for native Telegram API
+### Flask for Webhook
 import urllib.request as urr
 import xmltodict as xtd
 import datetime
 import requests
+import telegram
 import telebot
-import os
-from telegram.ext import Updater
+from flask import Flask, request
+
+
+
+# CONFIG
+TOKEN    = '477403139:AAG00B8blEjL3F1x6siJrUORoRduiILWeIo'
+HOST     = 'aznbot.herokuapp.com' # Same FQDN used when generating SSL Cert
+PORT     = 8443
+CERT     = 'server.crt'
+CERT_KEY = 'server.key'
+
+bot = telegram.Bot(TOKEN)
+app = Flask(__name__)
+context = (CERT, CERT_KEY)
+
+#@app.route('/')
+#def hello():
+#    return 'Hello World!'
+
+#@app.route('/' + TOKEN, methods=['POST'])
+#def webhook():
+#    update = telegram.update.Update.de_json(request.get_json(force=True), bot)
+#    bot.sendMessage(chat_id=update.message.chat_id, text='Hello, there')
+#    return 'OK'
+
+
+def setWebhook():
+	bot.setWebhook(webhook_url='https://%s:%s/%s' % (HOST, PORT, TOKEN),
+		       certificate=open(CERT, 'rb'))
+
+
+
+if __name__ == '__main__':
+	setWebhook()
+	time.sleep(5)
+	app.run(host='0.0.0.0',
+		port=PORT,
+		ssl_context=context,
+		debug=True)
+
+
+
+
+
 
 ### concat URL for today's XML
 str1='https://www.cbar.az/currencies/'
@@ -66,16 +111,4 @@ def echo_all(message):
 	bot.reply_to(message, "I don't get it.")
 
 
-#bot.polling()
-
-
-
-TOKEN = "477403139:AAG00B8blEjL3F1x6siJrUORoRduiILWeIo"
-PORT = int(os.environ.get('PORT', '5000'))
-updater = Updater(TOKEN)
-# add handlers
-updater.start_webhook(listen="0.0.0.0",
-                      port=PORT,
-                      url_path=TOKEN)
-updater.bot.set_webhook("https://aznbot.herokuapp.com/" + TOKEN)
-updater.idle()
+#webhook
