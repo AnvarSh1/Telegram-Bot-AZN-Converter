@@ -70,3 +70,8 @@ def echo_all(message):
 
 bot.polling()
 
+url = 'https://aznbot.herokuapp.com'
+while True:
+  r = requests.get(url)
+  time.sleep(29)
+
