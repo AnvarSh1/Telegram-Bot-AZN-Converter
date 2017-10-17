@@ -66,12 +66,3 @@ def send_welcome(message):
 @bot.message_handler(func=lambda m: True)
 def echo_all(message):
 	bot.reply_to(message, "I don't get it.")
-
-
-bot.polling()
-
-url = 'https://aznbot.herokuapp.com'
-while True:
-  r = requests.get(url)
-  time.sleep(29)
-
