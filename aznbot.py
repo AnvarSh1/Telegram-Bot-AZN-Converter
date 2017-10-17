@@ -13,7 +13,7 @@ bot = telebot.TeleBot("477403139:AAG00B8blEjL3F1x6siJrUORoRduiILWeIo")
 
 @bot.message_handler(commands=['start', 'help'])
 def send_welcome(message):
-	bot.reply_to(message, "WAZZZAAAAAAP")
+	bot.reply_to(message, "Available commands: /USD (or /dollar), /EUR (or /euro), /RUB (or /ruble), /GBP (or /pound)")
 
 # Get Ruble
 @bot.message_handler(commands=['RUB', 'ruble'])
@@ -85,7 +85,7 @@ def send_welcome(message):
 
 @bot.message_handler(func=lambda m: True)
 def echo_all(message):
-	bot.reply_to(message, "I don't get it.")
+	bot.reply_to(message, "I don't get it. Please use /start or /help")
 
 
 bot.polling()
