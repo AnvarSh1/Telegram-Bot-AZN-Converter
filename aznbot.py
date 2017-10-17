@@ -25,7 +25,7 @@ def xmlgrab():
 
 all_of_them=xmlgrab()
 
-bot = telebot.TeleBot("477403139:AAE7io-XXvjyH0GPZbd8m2AROM7MUt6PNX4")
+bot = telebot.TeleBot("MAH TOKEN")
 
 @bot.message_handler(commands=['start', 'help'])
 def send_welcome(message):
