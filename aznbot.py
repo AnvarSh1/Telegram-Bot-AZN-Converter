@@ -88,28 +88,28 @@ USD = all_of_them['ValCurs']['ValType'][1]['Valute'][44]['Value']
 USD = float(USD)
 @bot.message_handler(commands=['USD', 'dollar'])
 def send_usd(message):
-	bot.reply_to(message, '1 AZN = '+str(USD)+' USD')
+	bot.reply_to(message, '1 USD = '+str(USD)+' AZN')
 
 # Get Euro
 EUR = all_of_them['ValCurs']['ValType'][1]['Valute'][38]['Value']
 EUR = float(EUR)
 @bot.message_handler(commands=['EUR', 'euro'])
 def send_eur(message):
-	bot.reply_to(message, '1 AZN = '+str(EUR)+' EUR')
+	bot.reply_to(message, '1 EUR = '+str(EUR)+' AZN')
 
 # Get Ruble
 RUB = all_of_them['ValCurs']['ValType'][1]['Valute'][4]['Value']
 RUB = float(RUB)
 @bot.message_handler(commands=['RUB', 'ruble'])
 def send_rub(message):
-	bot.reply_to(message, '1 AZN = '+str(RUB)+' RUB')
+	bot.reply_to(message, '1 RUB = '+str(RUB)+' AZN')
 
 # Get UK Pound
 GBP = all_of_them['ValCurs']['ValType'][1]['Valute'][9]['Value']
 GBP = float(GBP)
 @bot.message_handler(commands=['GBP', 'pound'])
 def send_gbp(message):
-	bot.reply_to(message, '1 AZN = '+str(GBP)+' GBP')
+	bot.reply_to(message, '1 GBP = '+str(GBP)+' AZN')
 
 # command separator, separately (returns list)
 def com_sep(smth):
