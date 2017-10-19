@@ -13,6 +13,22 @@ Available Commads for bot:
 /GBP (or /pound) - for today's Great Britain Pound 
 
 /converter (or just /conv) - well, obviously for converter 
+To use converter just enter the amount followed by convertaion direction. 
+ For example: 
+ 3.50 USD2AZN 
+ Available convertations: 
+ AZN2USD 
+ AZN2EUR 
+ AZN2RUB 
+ AZN2GBP 
+ USD2AZN 
+ EUR2AZN 
+ RUB2AZN 
+ GBP2AZN
+
+
+
+
 
 /about, /credits, /new_phone_who_dis - info about who wrote the bot (me, duh)
 
