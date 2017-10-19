@@ -19,6 +19,6 @@ Available Commads for bot:
 
 
 
-Code is pretty much self-explanatory.
+Code is pretty much self-explanatory, plenty of comments too.
 Fresh data is grabbed from http://cbar.az website (they have updating XMLs)
 For now, polling is used, will switch to webhook anyday soon.
