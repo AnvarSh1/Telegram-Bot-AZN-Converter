@@ -119,6 +119,19 @@ def com_sep(smth):
 	else:
 		return(smth)
 
+
+#credits, about me, all that stuff
+@bot.message_handler(commands=['credits', 'about', 'new_phone_who_dis'])
+def send_usd(message):
+	bot.send_message(message.chat.id, '\This bot is made by Anvar Shirinbayli aka @muyfamoso (https://t.me/muyfamoso - let me know if there are any issues with bot or you just wanna chat maybe, I dunno) \nCode is available at https://github.com/AnvarSh1/azn_bot_telegram/ \nFeel free to contact me at enver.shirinbayli@gmal.com \n(You can also send me some PayPal on that e-mail, just sayin) \nYay! \nAnvar Shirinbayli, 2017.')
+
+
+### Freaking Emoji handler, never thought this is necessary as a separate handler.
+@bot.message_handler(func=lambda msg: msg.text.encode("utf-8"))
+def send_something(message):
+	bot.reply_to(message, "I like your Emoji, but, sadly, I don't get it. \n Please use /start or /help for all available commands")
+
+
 @bot.message_handler(func=lambda m: True)
 def echo_all(message):
 	if ((com_sep(message.text)[1].upper()=='USD2AZN') & (com_sep(message.text)[0].replace('.', '').isdigit()==True)):
