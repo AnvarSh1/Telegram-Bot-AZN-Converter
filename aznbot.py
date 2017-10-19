@@ -75,7 +75,7 @@ bot = telebot.TeleBot("MAH TOKEN")
 
 @bot.message_handler(commands=['start', 'help'])
 def send_welcome(message):
-	bot.send_message(message.chat.id, "Welcome to AZN Bot! \n Available Commads (you can tap them right here): \n /USD (or /dollar) - for today's US Dollar \n /EUR (or /euro) - for today's Euro \n /RUB (or /ruble) - for today's Russian Ruble \n /GBP (or /pound) - for today's Great Britain Pound \n /converter (or just /conv) - well, obviously for converter")
+	bot.send_message(message.chat.id, "Welcome to AZN Bot! \n Available Commads (you can tap them right here): \n /USD (or /dollar) - for today's US Dollar \n /EUR (or /euro) - for today's Euro \n /RUB (or /ruble) - for today's Russian Ruble \n /GBP (or /pound) - for today's Great Britain Pound \n /converter (or just /conv) - well, obviously for converter \n /about, /credits, /new_phone_who_dis - info about who wrote this bot")
 
 @bot.message_handler(commands=['converter', 'conv'])
 def send_conv(message):
@@ -123,7 +123,7 @@ def com_sep(smth):
 #credits, about me, all that stuff
 @bot.message_handler(commands=['credits', 'about', 'new_phone_who_dis'])
 def send_usd(message):
-	bot.send_message(message.chat.id, '\This bot is made by Anvar Shirinbayli aka @muyfamoso (https://t.me/muyfamoso - let me know if there are any issues with bot or you just wanna chat maybe, I dunno) \nCode is available at https://github.com/AnvarSh1/azn_bot_telegram/ \nFeel free to contact me at enver.shirinbayli@gmal.com \n(You can also send me some PayPal on that e-mail, just sayin) \nYay! \nAnvar Shirinbayli, 2017.')
+	bot.send_message(message.chat.id, 'This bot is made by Anvar Shirinbayli aka @muyfamoso (https://t.me/muyfamoso - let me know if there are any issues with bot or you just wanna chat maybe, I dunno) \nCode is available at https://github.com/AnvarSh1/azn_bot_telegram/ \nFeel free to contact me at enver.shirinbayli@gmal.com \n(You can also send me some PayPal on that e-mail, just sayin) \nYay! \nAnvar Shirinbayli, 2017.')
 
 
 ### Freaking Emoji handler, never thought this is necessary as a separate handler.
